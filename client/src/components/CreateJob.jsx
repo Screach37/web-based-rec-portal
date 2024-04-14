@@ -36,7 +36,7 @@ const CreateJob = ({ open, alljob, setOpen, setAllJob }) => {
 			companyId: user._id,
 		};
 
-		const response = await fetch("http://https://web-based-rec-portal-phi.vercel.app:4000/company/createjob", {
+		const response = await fetch("https://web-based-rec-portal-phi.vercel.app:4000/company/createjob", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(body),

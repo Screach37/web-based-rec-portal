@@ -11,7 +11,7 @@ const AppliedUserPage = () => {
 	useEffect(() => {
 		const userInfoMethod = async () => {
 			const response = await fetch(
-				`http://https://web-based-rec-portal-phi.vercel.app:4000/company/getapplied_job/${id}`,
+				`https://web-based-rec-portal-phi.vercel.app:4000/company/getapplied_job/${id}`,
 				{
 					method: "GET",
 					headers: { "Content-Type": "application/json" },
@@ -27,7 +27,7 @@ const AppliedUserPage = () => {
 
 		const getData = async () => {
 			if (user.userType == "student") {
-				const response = await fetch(`http://https://web-based-rec-portal-phi.vercel.app:4000/user/${user._id}`, {
+				const response = await fetch(`https://web-based-rec-portal-phi.vercel.app:4000/user/${user._id}`, {
 					method: "GET",
 					headers: { "Content-Type": "application/json" },
 				});
@@ -39,7 +39,7 @@ const AppliedUserPage = () => {
 				}
 			} else {
 				const response = await fetch(
-					`http://https://web-based-rec-portal-phi.vercel.app:4000/company/getCompany/${user._id}`,
+					`https://web-based-rec-portal-phi.vercel.app:4000/company/getCompany/${user._id}`,
 					{
 						method: "GET",
 						headers: { "Content-Type": "application/json" },

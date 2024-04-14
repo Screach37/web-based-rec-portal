@@ -23,7 +23,7 @@ const InternshipPage = () => {
 	useEffect(() => {
 		const alljobs = async () => {
 			const response = await fetch(
-				"http://https://web-based-rec-portal-phi.vercel.app:4000/company/all_internship",
+				"https://web-based-rec-portal-phi.vercel.app:4000/company/all_internship",
 				{
 					method: "GET",
 					headers: { "Content-Type": "application/json" },
@@ -40,7 +40,7 @@ const InternshipPage = () => {
 
 		const userInfoMethod = async () => {
 			if (user.userType == "student") {
-				const response = await fetch(`http://https://web-based-rec-portal-phi.vercel.app:4000/user/${user._id}`, {
+				const response = await fetch(`https://web-based-rec-portal-phi.vercel.app:4000/user/${user._id}`, {
 					method: "GET",
 					headers: { "Content-Type": "application/json" },
 				});
@@ -52,7 +52,7 @@ const InternshipPage = () => {
 				}
 			} else {
 				const response = await fetch(
-					`http://https://web-based-rec-portal-phi.vercel.app:4000/company/getCompany/${user._id}`,
+					`https://web-based-rec-portal-phi.vercel.app:4000/company/getCompany/${user._id}`,
 					{
 						method: "GET",
 						headers: { "Content-Type": "application/json" },
@@ -78,7 +78,7 @@ const InternshipPage = () => {
 		if (user.userType == "company") {
 			return setOpen(true);
 		}
-		const response = await fetch("http://https://web-based-rec-portal-phi.vercel.app:4000/user/apply_for_job", {
+		const response = await fetch("https://web-based-rec-portal-phi.vercel.app:4000/user/apply_for_job", {
 			method: "PUT",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(body),
@@ -99,7 +99,7 @@ const InternshipPage = () => {
 		if (user.userType == "company") {
 			return setOpen(true);
 		}
-		const response = await fetch("http://https://web-based-rec-portal-phi.vercel.app:4000/user/save_job", {
+		const response = await fetch("https://web-based-rec-portal-phi.vercel.app:4000/user/save_job", {
 			method: "PUT",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(body),
