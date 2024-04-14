@@ -11,7 +11,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-const URL = "mongodb://localhost:27017/hiring";
+const URL = "mongodb+srv://b200226:rSZwLHAQgziw7Awc@cluster0.gmfre1p.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose
 	.connect(URL, { useNewUrlParser: true })

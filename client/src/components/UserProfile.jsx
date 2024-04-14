@@ -14,7 +14,7 @@ const UserProfile = () => {
 
 	useEffect(() => {
 		const userInfoMethod = async (req, res) => {
-			const response = await fetch(`http://localhost:4000/user/${user._id}`, {
+			const response = await fetch(`http://https://web-based-rec-portal-phi.vercel.app:4000/user/${user._id}`, {
 				method: "GET",
 				headers: { "Content-type": "application/json" },
 			});
@@ -45,7 +45,7 @@ const UserProfile = () => {
 			const formData = new FormData();
 			formData.append("file", pdffile);
 
-			const response = await fetch("http://localhost:4000/upload/upload_pdf", {
+			const response = await fetch("http://https://web-based-rec-portal-phi.vercel.app:4000/upload/upload_pdf", {
 				method: "POST",
 				body: formData,
 			});
@@ -64,7 +64,7 @@ const UserProfile = () => {
 		}
 		console.log("userdata", userdata);
 		const response = await fetch(
-			`http://localhost:4000/user/updateProfile/${user._id}`,
+			`http://https://web-based-rec-portal-phi.vercel.app:4000/user/updateProfile/${user._id}`,
 			{
 				method: "PUT",
 				headers: { "Content-Type": "application/json" },
